@@ -7,9 +7,14 @@
 Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if ((number > 99 && number < 1000) || (number < -99 && number > -1000))
+void SearchSecondDigit(int num)
 {
-    int secondDigit = Math.Abs(number % 100 / 10);
-    Console.WriteLine($"Вторая цифра числа -> {secondDigit}");
+    if (num > 99 && num < 1000 || num < -99 && num > -1000)
+    {
+        int secondDigit = Math.Abs(num % 100 / 10);
+        Console.WriteLine($"Вторая цифра числа -> {secondDigit}");
+    }
+    else Console.WriteLine($"Введено некорректное число");
 }
-else Console.WriteLine($"Введено некорректное число");
+SearchSecondDigit(number);
+
